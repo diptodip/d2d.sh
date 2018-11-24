@@ -1,0 +1,37 @@
+{{ define "main" }}
+    <head>
+        <title>
+            404 - {{ .Site.Title }}
+        </title>
+        <link rel="icon" href="/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="author" content="Diptodip Deb">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="thoughts on putting ai to the fullest possible use">
+        <style>
+            body{
+                background-color:#070707;
+                color:#fefefe;
+                font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+                font-size:16px;
+                line-height:1.8;
+            }
+            a{
+                padding:1px;
+                font-weight:800;
+                text-decoration:none;
+                color:#fefefe;
+            }
+            a:hover{
+                background-color:#513c94;
+                color:#fefefe !important;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div style="position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);">
+            <a href="#" onclick="history.go(-1)">404</a>
+        </div>
+    </body>
+{{ end }}

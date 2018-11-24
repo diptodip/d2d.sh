@@ -1,0 +1,11 @@
+baseURL = "https://d2d.sh/"
+languageCode = "en-us"
+title = "diptodip"
+disableLiveReload = true
+disableHugoGeneratorInject = true
+
+[params]
+    author = "Diptodip Deb"
+    subtitle = "দীপ্তদীপ"
+    blogtitle = "warm, wet, and noisy"
+    description = "thoughts on putting ai to the fullest possible use"

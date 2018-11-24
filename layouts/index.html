@@ -1,0 +1,47 @@
+{{ define "main" }}
+<head>
+    <title>
+        {{ .Site.Title }}
+    </title>
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="thoughts on putting ai to the fullest possible use">
+    {{ partial "flow.html" . }}
+</head>
+<body>
+    {{ partial "strip.html" }}
+    <div id="wrapper">
+        {{ partial "navbar.html" }}
+        <div id="bay">
+            <object data="{{ "img/bay.svg" | relURL }}" type="image/svg+xml"></object>
+        </div>
+        <div id="mast">
+            <div id="title">
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                <div id="subtitle">
+                    {{ .Site.Params.subtitle }}
+                </div>
+            </div>
+            <div>
+                <h1>{{ .Site.Params.blogtitle }}</h1>
+            </div>
+            <div style="text-align: center;">
+                <h2>{{ .Site.Params.description }}</h2>
+            </div>
+        </div>
+        <div id="content">
+            <ol id="posts">
+            {{ range where .Pages "Type" "posts" }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <h3 style="text-transform: lowercase;">{{ .Date.Format "Jan 02, 2006" }}</h3>
+                    {{ .Params.excerpt }}
+                </li>
+            {{ end }}
+            </ol>
+        </div>
+    </div>
+</body>
+{{ end }}

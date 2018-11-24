@@ -1,0 +1,37 @@
+{{ define "main" }}
+<head>
+    <title>
+        {{ .Title }} - {{ .Site.Title }}
+    </title>
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="thoughts on putting ai to the fullest possible use">
+    {{ partial "night.html" . }}
+</head>
+<body>
+    {{ partial "strip.html" . }}
+    <div id="wrapper">
+        {{ partial "navbar.html" . }}
+        <div id="bay">
+            <object data="{{ "img/bay.svg" | relURL }}" type="image/svg+xml"></object>
+        </div>
+        <div id="mast">
+            <div id="title">
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                <div id="subtitle">
+                    {{ .Site.Params.subtitle }}
+                </div>
+            </div>
+            <div>
+                <h1>{{ .Title }}</h1>
+            </div>
+        </div>
+        <div id="content">
+            {{ .Content }}
+            </ol>
+        </div>
+    </div>
+</body>
+{{ end }}
