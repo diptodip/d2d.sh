@@ -9,3 +9,6 @@ disableHugoGeneratorInject = true
     subtitle = "দীপ্তদীপ"
     blogtitle = "warm, wet, and noisy"
     description = "thoughts on putting ai to the fullest possible use"
+
+[permalinks]
+  posts = "/:year/:title/"
