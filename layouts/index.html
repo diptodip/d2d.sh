@@ -31,12 +31,14 @@
             </div>
         </div>
         <div id="content">
-            <ol id="posts">
+            <ul id="posts" style="list-style-type: none">
             {{ range where .Site.RegularPages "Type" "posts"}}
                 <li>
+                    <h3 class="date">{{.Date.Format "Jan022006"}}</h3>
                     <a href="{{.Permalink}}">{{.Params.title}}</a>
-                    <h3 style="text-transform: lowercase;">{{.Date.Format "Jan 02, 2006"}}</h3>
+                    <div style="margin-left: -2.8em; padding-left: 0px;">
                     {{.Params.excerpt}}
+                    </div>
                 </li>
             {{ end }}
             </ol>
