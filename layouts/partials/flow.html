@@ -8,7 +8,7 @@ body{
 }
 
 #wrapper{
-    max-width:800px;
+    max-width:700px;
     margin-left: 9px;
 }
 
@@ -53,6 +53,7 @@ a:hover{
 
 #content{
     padding:20px;
+    padding-left: 0px;
     margin-left: 8em;
 }
 
@@ -71,12 +72,20 @@ a:hover{
     font-size:20px;
 }
 
-.date{
+.inline{
     display: inline;
+}
+
+.postid{
+    display: inline;
+    float: left;
     margin-left: -8.5em;
-    width: 8em;
-    text-align: right;
-    text-transform: lowercase;
+}
+
+.excerpt{
+    display: inline;
+    float: right;
+    max-width: 500px;
 }
 
 h1{
@@ -153,12 +162,23 @@ blockquote{
     color:#2e244c;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 700px){
     #bay{
         display: none;
     }
     #subtitle{
         margin-left: 10px;
+    }
+    .postid{
+        display: block;
+        float: left;
+        margin-left: -8.5em;
+    }
+    .excerpt{
+        display: block;
+        float: right;
+        max-width: 500px;
+        margin-left: -8.5em;
     }
 }
 </style>

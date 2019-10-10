@@ -23,21 +23,20 @@
                     {{ .Site.Params.subtitle }}
                 </div>
             </div>
-            <div>
-                <h1>{{ .Site.Params.blogtitle }}</h1>
-            </div>
-            <div style="text-align: center;">
-                <h2>{{ .Site.Params.description }}</h2>
-            </div>
         </div>
+        </br>
         <div id="content">
             <ul id="posts" style="list-style-type: none">
             {{ range where .Site.RegularPages "Type" "posts"}}
                 <li>
-                    <h3 class="date">{{.Date.Format "Jan022006"}}</h3>
-                    <a href="{{.Permalink}}">{{.Params.title}}</a>
-                    <div style="margin-left: -2.8em; padding-left: 0px;">
-                    {{.Params.excerpt}}
+                    <div>
+                        <div class="postid" style="display: block; float: left; margin-left: -8.5em;">
+                            <h3 class="inline">{{.Date.Format "2006-01-02"}}</h3>
+                            <a class="inline" href="{{.Permalink}}">{{.Params.title}}</a>
+                        </div>
+                        <div class="excerpt">
+                            {{.Params.excerpt}}
+                        </div>
                     </div>
                 </li>
             {{ end }}
